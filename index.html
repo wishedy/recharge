@@ -1,0 +1,277 @@
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Tencent-CDC">
+    <meta name="Robots" content="all">
+    <meta name="mobile-agent" content="format=html5;url=//pay.qq.com/h5/index.shtml">
+    <link rel="canonical" href="//pay.qq.com/ipay/index.shtml">
+    <meta name="Description" content="Q币,Q点,QB,QD,QQ,腾讯,充值中心,帐户充值,帐户管理,Q点充值,Q币充值,Q点查询,Q币查询,QB查询,QD查询">
+    <meta name="Keywords" content="Q币,Q点,QB,QD,QQ,腾讯,充值中心,帐户充值,帐户管理,Q点充值,Q币充值,Q点查询,Q币查询,QB查询,QD查询">
+    <meta content="Tencent" name="Copyright">
+    <link rel="stylesheet" charset="utf-8"
+          href="css/base.css">
+    <title>点数设置</title>
+    <link rel="stylesheet" href="css/account.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="wrapper-loading" class="wrap-loading" style="display: none;"><i class="icon-load"></i>正在加载，请稍后……</div>
+<div id="wrapper" class="wrapper" style="">
+    <div class="header">
+        <div class="header-layer cf">
+            <h1 class="logo"><a href="//pay.qq.com/index.shtml?aid=pay.ipay.logo.home&amp;ADTAG=pay.ipay.logo.home"><img
+                    src="//imgcache.qq.com/bossweb/pay/pay_v4/images/public/logo.png" alt="腾讯充值中心"></a></h1>
+            <div class="nav">
+                <ul>
+                    <li class="current"><a href="javascript:;"
+                           title="首页"><i class="title_index">首页</i></a></li>
+                    <li stype="recharge"><a
+                            href="html/recharge.html"
+                            title="钻石充值"><i class="title_pay">钻石充值</i></a></li>
+                    <li stype="recharge"><a
+                            href="html/gold.html"
+                            title="金币充值"><i class="title_pay">金币充值</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="breadcrumb">
+            <span>您当前位置：</span><a id="where"
+                                  href="//pay.qq.com/service/index.shtml?aid=pay.ipay.guide.service&amp;ADTAG=pay.ipay.guide.service">点数设置</a>
+        </div>
+        <div class="container" id="pay_result_container" style="display:none;">
+            <div class="wrap-padding ">
+                <div class="confirm success cf pay-result" style="display:none;">
+                    <i class="icon-confirm "></i>
+                    <div class="confirm-cont">
+                        <h5>您的订单号 ：<em class="pay_billNo"></em>,已成功提交(<em>请注意保存订单号</em>)!</h5>
+                        <p class="pay_result_tip">购买结果会有延时，您可以点击下面“查询结果”链接查询</p>
+                        <p>&nbsp;</p>
+                        <p class="pay_query_loading" style="display:none;"><i class="icon-load"></i>查询中</p>
+                        <p><a href="javascript:void(0)" class="pay_query_result">查询结果</a></p>
+                    </div>
+                </div>
+                <div class="confirm success cf pay-sucess" style="display:none;">
+                    <i class="icon-confirm "></i>
+                    <div class="confirm-cont">
+                        <h5>系统扣费成功，24小时内到账，感谢您的支持。</h5>
+                        <h5>您的订单号 ：<em class="pay_billNo"></em></h5>
+                    </div>
+                </div>
+                <div class="confirm success cf pay-load" style="display:none;">
+                    <i class="icon-confirm "></i>
+                    <div class="confirm-cont">
+                        <h5>系统正在处理中，您的订单号 ：<em class="pay_billNo"></em></h5>
+                        <p class="pay_result_tip">购买结果会有延时，您可以点击下面“查询结果”链接查询</p>
+                        <p>&nbsp;</p>
+                        <p class="pay_query_loading" style="display:none;"><i class="icon-load"></i>查询中</p>
+                        <p><a href="javascript:void(0)" class="pay_query_result">查询结果</a></p>
+                    </div>
+                </div>
+                <div class="confirm error cf pay-failed" style="display:none;">
+                    <i class="icon-confirm "></i>
+                    <div class="confirm-cont">
+                        <h5>系统扣费失败，请重新充值，或选择其它充值方式，感谢您的支持。</h5>
+                        <h5>您的订单号 ：<em class="pay_billNo"></em></h5>
+                    </div>
+                </div>
+                <div class="confirm-article" style="padding: 10px 10px 20px 85px;">
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="go_charge" onclick="SMS.goPreStep();"><span>继续充值</span>
+                        </button>
+                        &nbsp;</div>
+                </div>
+            </div>
+            <div id="pay_rcmd" style="display:none;"></div>
+        </div>
+        <div id="result_success" class="container pay-result" style="display:none;">
+            <div id="result_ad_area"></div>
+            <div id="success_wrapper" class="wrap-padding success">
+                <div class="confirm cf">
+                    <i class="icon-confirm"></i>
+                    <div class="confirm-cont">
+                        <h5 id="result_msg"></h5>
+                        <div id="result_ser_msg"></div>
+                        <p id="jifenLink"></p>
+                        <p><a id="success_more_link" href="#" target="_blank">更多详情&gt;&gt;</a></p>
+                    </div>
+                    <div id="continue_actions" class="form-actions"></div>
+                </div>
+                <div id="open_service_for_recharge" class="form-horizontal" style="display:none;">
+                    <div class="control-group">
+                        <label class="control-label" data-type="service_field_label">开通服务：</label>
+                        <div class="controls">
+                            <h5 id="open_service_for_recharge_name" class="title-primary"><span
+                                    id="open_service_for_recharge_price" class="help-inline">元/月</span></h5>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" data-type="target_uin_field_label">开通帐户：</label>
+                        <div class="controls">
+                            <h5 id="open_service_for_recharge_uin" class="title-primary"></h5>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" data-type="amount_field_label">开通时长：</label>
+                        <div class="controls">
+                            <h5 id="open_service_for_recharge_month" class="title-primary"></h5>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">应付金额：</label>
+                        <div class="controls">
+                            <h5 id="open_service_for_recharge_fee" class="title-primary"></h5>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="open_service_for_recharge_submit" type="button" class="btn-primary"
+                                data-type="submit_button"><span>立即开通</span></button>
+                        &nbsp;
+                        <a id="open_service_for_recharge_modify" href="#">修改订单</a>
+                    </div>
+                </div>
+            </div>
+            <div id="result_rcmd" style="display:none;"></div>
+        </div>
+        <div id="result_error" style="display:none;">
+            <div class="wrap-padding warn">
+                <div class="confirm cf">
+                    <i class="icon-confirm"></i>
+                    <div class="confirm-cont">
+                        <p id="open_service_for_recharge_errmsg"></p>
+                    </div>
+                    <div class="form-actions">
+                        <button id="open_service_for_recharge_errbtn" type="submit" class="btn-primary">
+                            <span>重新支付</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pay_main" class="container column-pay cf">
+            <div class="layout-sidebar" style="display: none;">
+                <div class="pay-info">
+                    <div class="bu-logo"><a stype="home" href="http://vip.qq.com/" target="_blank"><img stype="logo"
+                                                                                                        src="//imgcache.qq.com/bossweb/ipay/images/public/icons/ltmclub/logo_l.png"
+                                                                                                        alt="QQ会员"></a>
+                    </div>
+                    <p class="price" stype="price">10元/月</p>
+                </div>
+                <div class="wrap-padding">
+                    <div class="about-info" stype="desc" style="">
+                        <ul>
+                            <li>70余项尊贵特权，VIP您的生活</li>
+                            <li>QQ等级加速</li>
+                            <li>表情漫游，聊天记录漫游</li>
+                            <li>免费游戏礼包，群特权</li>
+                            <li>年费QQ会员额外尊享最高2.5倍等级加速、千人群等更多特权，每开通1年赠送200点成长值。</li>
+                        </ul>
+                    </div>
+                    <div id="agree_term_field" class="box-agree" style="">
+                        <p id="service_time_limit">月服务期限：开通当日起31天</p>
+                        <label id="agree_term_checkbox" class="selected"><a href="javascript:void(0);" class="checkbox"><i
+                                class="icon-checkbox"></i>同意 </a><a stype="term" href="//pay.qq.com/term/ltmclub.shtml"
+                                                                    target="_blank"><span stype="name">QQ会员</span><span
+                                id="term_title">服务条款</span></a></label>
+                        <div id="agree_term_warning" class="help-block"><i class="icon-help"></i>必须同意以上条款才能开通</div>
+                    </div>
+                    <div class="box-entry" id="pay_actions">
+                        <p id="ask_link" style="display: none;"><a id="a_ask_link" stype="ask"
+                                                                   href="//pay.qq.com/service/ask_v3.shtml?sid=ltmclub&amp;c=ltmclub,cjclub&amp;aid=ipay.ltmclub&amp;ADTAG=ipay.ltmclub"
+                                                                   target="_blank">向好友索要&gt;&gt;</a></p>
+                    </div>
+                    <div stype="kf" class="box-kf" style=""><a id="div_kf"
+                                                               href="//kf.qq.com/faq/120322fu63YV131028AFFb6B.html"
+                                                               target="_blank"><i class="icon-kf"></i>客服帮助</a></div>
+                </div>
+                <div class="mod-pop-layer box-remind" id="about-vipstatus" style="display:none;">
+                    <i class="icon-caret-top t1"></i>
+                    <i class="icon-caret-top t2"></i>
+                    <h5>您当前服务状态</h5>
+                    <ul>
+                        <li id="li_about_vipstatus" style="display:none;"></li>
+                        <li id="li_y_about_vipstatus" style="display:none;"></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="layout-content">
+                <div class="wrap-padding">
+                    <div id="pay_tips_or_actions"></div>
+                    <div id="pay_form" class="form-horizontal">
+                        <div id="pay_form_inner" class="pay_form_inner-content">
+                            <div id="target_uin_input_field" class="control-group">
+                                <label id="target_uin_field_label" class="control-label">房间号：</label>
+                                <div class="controls">
+                                    <span id="target_uin_value" class="title-primary" style="display: none;"></span>
+                                    <div id="target_uin_wrapper" class="input-append user-append open">
+                                        <input id="target_uin_input" class="input-user" type="text" maxlength="13" placeholder="请输入房间号" data-testOnOff="false" data-warn="请检查您的房间是否正确！">
+                                        <div class="dropdown">
+                                            <div id="friend_list_outer" class="bind_friend">
+                                                <div class="f_qqlist" id="f_list" style="display: none;">
+                                                </div>
+                                                <div class="f_qqlist" id="f_search" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="target_uin_tips" class="help-normal help-normal-empty"></div>
+                                    <div id="target_uin_warning" class="help-block"></div>
+                                </div>
+                            </div>
+                            <div id="amount_input_field" class="control-group">
+                                <label id="amount_field_label" class="control-label">设置点数：</label>
+                                <div class="controls">
+                                    <!--<span class="add-diamond add-left set-dice-user">A</span>-->
+                                    <span class="set-dice-num"><em>1</em>
+
+                                    </span>
+                                    <!--<span class="add-diamond add-left set-dice-user">B</span>-->
+                                    <span class="set-dice-num"><em>2</em></span>
+                                    <!--<span class="add-diamond add-left set-dice-user">C</span>-->
+                                    <span class="set-dice-num"><em>3</em></span>
+                                    <!--<span class="add-diamond add-right">+</span>
+                                    <span id="amount_unit_tips" class="help-text"></span>
+
+                                    <div id="amount_warning" class="help-block"></div>-->
+                                </div>
+                            </div>
+
+                            <div id="main_template">
+                                <div class="control-group"><label class="control-label">确认设置：</label>
+                                    <div id="qqwallet_passPayDiv" style="" class="pass tit">
+                                        <div class="andr-qrcode-cont"><a id="qqwallet_toShowPassPay"
+                                                                         href="javascript:void 0"
+                                                                         class="andr-qrcode-cont__btn">点我设置点数</a>
+                                            <div class="andr-qrcode__wrapper">
+
+                                                <div class="andr-qrcode__box"><i class="andr-qrcode__box-arrow"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="footer">
+    <p>Copyright © 1998 - 2017 Tencent. All Rights Reserved <br>
+        <a class="clink" target="_blank"
+           href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml">版权所有</a> <a class="clink"
+                                                                                       target="_blank"
+                                                                                       href="http://www.qq.com/contract.shtml">服务条款</a>
+    </p>
+</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/index.html.js"></script>
+<div class="mask-modal" style="display: none;">
+    <section class="popupCont"><figure class="closePopup"><img src="img/Close@2x.png"></figure><aside class="title">请您检查充值ID是否正确！</aside><aside class="content">该用户ID存在</aside><section class="button"><button class="btnEnter">知道了</button></section></section>
+</div>
+</body>
+</html>

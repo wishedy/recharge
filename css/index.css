@@ -1,0 +1,147 @@
+.form-horizontal {
+  margin-top: 150px; }
+  .form-horizontal .control-group {
+    height: 48px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 240px;
+    width: 700px; }
+    .form-horizontal .control-group input {
+      width: 242px;
+      height: 36px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      border: 1px solid #ccc; }
+    .form-horizontal .control-group .diamond {
+      width: 140px; }
+    .form-horizontal .control-group .add-diamond {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      font-size: 18px;
+      color: #999;
+      cursor: pointer;
+      border: 1px solid #e6e6e6; }
+    .form-horizontal .control-group input:focus {
+      outline: none;
+      box-shadow: none;
+      border: 1px solid #ccc; }
+    .form-horizontal .control-group .set-dice-num {
+      display: inline-block;
+      width: 80px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      font-size: 18px;
+      color: #999;
+      cursor: pointer;
+      border: 1px solid #e6e6e6;
+      position: relative; }
+      .form-horizontal .control-group .set-dice-num .set-num-box {
+        position: absolute;
+        background: #fcfcfc;
+        width: 220px;
+        height: 160px;
+        line-height: 40px;
+        top: 28px;
+        left: 0;
+        border: 1px solid #e6e6e6;
+        z-index: 2; }
+        .form-horizontal .control-group .set-dice-num .set-num-box .set-num-list {
+          padding: 20px;
+          height: 120px;
+          width: 180px; }
+          .form-horizontal .control-group .set-dice-num .set-num-box .set-num-list .set-num-item {
+            width: 38px;
+            height: 38px;
+            background: #28cfcf;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 38px;
+            color: #fff;
+            float: left;
+            margin: 10px 10px; }
+    .form-horizontal .control-group .hide-dot-list .set-num-box {
+      display: none; }
+    .form-horizontal .control-group .set-dice-user {
+      color: #333; }
+
+.andr-qrcode-cont .andr-qrcode-cont__btn {
+  text-align: center;
+  width: 164px;
+  padding: 0; }
+
+.mask-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0; }
+
+.popupCont {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -144px;
+  margin-left: -250px; }
+  .popupCont .btnCancel {
+    background: #BDC3CF; }
+  .popupCont figure img {
+    float: right;
+    margin-right: 60px;
+    cursor: pointer; }
+  .popupCont .closePopup {
+    display: block;
+    height: 20px;
+    width: 100%; }
+  .popupCont .content {
+    font-size: 16px;
+    color: #333;
+    line-height: 16px;
+    margin-bottom: 50px;
+    width: 100%; }
+  .popupCont .title {
+    font-size: 16px;
+    color: #333;
+    line-height: 16px;
+    font-weight: 700;
+    margin-bottom: 24px; }
+  .popupCont .button {
+    font-size: 0; }
+  .popupCont aside {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    height: auto; }
+  .popupCont button {
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 15px;
+    color: #FFF;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    outline: medium;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none; }
+  .popupCont .btnEnter {
+    background: #2899E6;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=index.css.map */
