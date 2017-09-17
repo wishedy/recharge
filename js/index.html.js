@@ -91,11 +91,10 @@ $(document).ready(function () {
                         }else{
                             dotStr+=","+v;
                         }
-                    })
+                    });
                     var dataJson = {
                         gameResult: dotStr,
-                        roomId: t.el.inputNum.val(),
-                        gameTimes:1
+                        roomId: t.el.inputNum.val()
                     };
                     $.ajax({
                         type: "GET",  //提交方式
