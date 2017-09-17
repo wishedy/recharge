@@ -5,7 +5,7 @@ var recharge = {
     init: function (i) {
         var t = this;
         t.data.postType = i;
-        if (i === 1) {
+        if (i === 0) {
             t.data.des = "钻石";
         } else {
             t.data.des = "金币";
@@ -66,16 +66,15 @@ var recharge = {
             });
             if (rightObOff) {
                 var dataJson = {
-                    id: t.el.idInput.val(),
-                    amount: t.el.amount.val(),
-                    postType: t.data.postType
+                    userId: t.el.idInput.val(),
+                    payCount: t.el.amount.val(),
+                    payType: t.data.postType
                 };
                 $.ajax({
                     type: "GET",  //提交方式
                     url: "..//submit.json",//路径
                     data: JSON.stringify(dataJson),//数据，这里使用的是Json格式进行传输
                     success: function (result) {//返回数据根据结果进行相应的处理
-                        console.log(result)
                         if (result.onOff) {
                             t.dialogShow({
                                 title: "恭喜您充值成功！",

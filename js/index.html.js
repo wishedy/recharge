@@ -84,9 +84,18 @@ $(document).ready(function () {
                     $(".set-dice-num").each(function () {
                         numList.push($(this).find("em").text());
                     });
+                    var dotStr = "";
+                    $.each(numList,function(i,v){
+                        if(i===0){
+                            dotStr+=v;
+                        }else{
+                            dotStr+=","+v;
+                        }
+                    })
                     var dataJson = {
-                        numList: numList,
-                        roomId: t.el.inputNum.val()
+                        gameResult: dotStr,
+                        roomId: t.el.inputNum.val(),
+                        gameTimes:1
                     };
                     $.ajax({
                         type: "GET",  //提交方式
