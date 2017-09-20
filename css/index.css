@@ -187,9 +187,10 @@
         border: 1px solid #ddd;
         margin: 30px 0;
         color: #666; }
-        .recharge-login .recharge-login-container .login-operate .login-opreate-bar input {
+        .recharge-login .recharge-login-container .login-operate .login-opreate-bar input, .recharge-login .recharge-login-container .login-operate .login-opreate-bar input:focus {
           outline: none;
-          border: none;
+          border: 0;
+          box-shadow: none;
           line-height: 42px;
           width: 240px;
           height: 42px; }
